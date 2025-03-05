@@ -1,8 +1,4 @@
-#define _GLOBAL_MACRO_FUNCTIONS_COMPILATION_UNIT_NAME _MyPlugin_
-
-// #include <SkyrimScripting/Plugin.h>
-#include <SkyrimScripting/Logging.h>
-#include <SkyrimScripting/SKSE_Messages.h>
+#include <SkyrimScripting/Plugin.h>
 #include <_Log_.h>
 
 _OnDataLoaded_ {

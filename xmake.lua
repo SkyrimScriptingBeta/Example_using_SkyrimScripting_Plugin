@@ -24,7 +24,7 @@ mod_info = {
     mod_files = {"Scripts"}
 }
 
-skyrim_versions = {"ae", "se", "vr", "ng"}
+skyrim_versions = {"ng"}
 
 includes("papyrus.lua")
 includes("skse.lua")
