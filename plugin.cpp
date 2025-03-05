@@ -1,16 +1,11 @@
-#include <RE/Skyrim.h>
-#include <SKSE/SKSE.h>
+#define _GLOBAL_MACRO_FUNCTIONS_COMPILATION_UNIT_NAME _MyPlugin_
 
-extern "C" __declspec(dllexport) bool SKSEPlugin_Load(const SKSE::LoadInterface* a_skse) {
-    SKSE::Init(a_skse);
+// #include <SkyrimScripting/Plugin.h>
+#include <SkyrimScripting/Logging.h>
+#include <SkyrimScripting/SKSE_Messages.h>
+#include <_Log_.h>
 
-    SKSE::GetMessagingInterface()->RegisterListener(
-        "SKSE",
-        [](SKSE::MessagingInterface::Message* a_msg) {
-            if (a_msg->type == SKSE::MessagingInterface::kDataLoaded)
-                RE::ConsoleLog::GetSingleton()->Print("'Choose Your Own Adventure' initialized.");
-        }
-    );
-
-    return true;
+_OnDataLoaded_ {
+    PrintToConsole("EXAMPLE: On Data Loaded!");
+    _Log_("EXAMPLE: On Data Loaded!");
 }

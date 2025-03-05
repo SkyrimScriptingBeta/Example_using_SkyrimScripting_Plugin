@@ -1,9 +1,3 @@
-add_rules("mode.debug", "mode.release")
-
-set_languages("c++23")
-
-add_repositories("SkyrimScripting https://github.com/SkyrimScripting/Packages.git")
-
 mods_folders = os.getenv("SKYRIM_MODS_FOLDERS")
 
 if mods_folders then
@@ -32,4 +26,5 @@ for _, game_version in ipairs(skyrim_versions) do
             author = mod_info.author,
             email = mod_info.email
         })
+        add_packages("SkyrimScripting.Plugin")
 end
