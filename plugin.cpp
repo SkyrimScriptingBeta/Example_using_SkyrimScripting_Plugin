@@ -1,6 +1,5 @@
 #include <SkyrimScripting/Plugin.h>
 
-SKSEPlugin_OnDataLoaded {
-    ConsoleLog("Hello, world!");
-    Log("Hello, world!");
-}
+SKSEPlugin_Entrypoint { Log("Hello, world!"); }
+
+SKSEPlugin_OnDataLoaded { ConsoleLog("Hello, world!"); }
